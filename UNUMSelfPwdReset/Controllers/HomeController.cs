@@ -56,8 +56,8 @@ namespace UNUMSelfPwdReset.Controllers
                    .GetAsync();
 
                 userInfo.LastPasswordChangeDateTime = user?.LastPasswordChangeDateTime?.DateTime;
-                userInfo.OnPremisesSamAccountName = user?.OnPremisesSamAccountName is null ?"":"";
-                userInfo.LoginClients = await _loginsManager.GetUserLogins(userInfo?.Id, userInfo?.UserPrincipalName, userInfo?.LastPasswordChangeDateTime, userInfo?.OnPremisesSamAccountName);
+                //userInfo.OnPremisesSamAccountName = user?.OnPremisesSamAccountName;
+                userInfo.LoginClients = await _loginsManager.GetUserLogins(userInfo?.Id, userInfo?.UserPrincipalName, userInfo?.LastPasswordChangeDateTime, user?.OnPremisesSamAccountName);
                 string strProfilePicBase64 = "";
                 try
                 {

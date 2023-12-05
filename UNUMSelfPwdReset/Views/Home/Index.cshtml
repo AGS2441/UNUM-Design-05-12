@@ -51,7 +51,7 @@
                     <div class="m-sa">
                         <strong>Your</strong>
 
-                        <b> LAN ID @Model.LoginClients[0].OnPremisesSamAccountName</b> <strong>will <b>expire</b> on </strong>
+                        <b> LAN ID @Model.OnPremisesSamAccountName</b> <strong>will <b>expire</b> on </strong>
 
                         <b>@DateTime.Now.AddDays(Convert.ToDouble(Model.LoginClients[0].ExpireInDays)).DayOfWeek, @DateTime.Now.AddDays(Convert.ToDouble(Model.LoginClients[0].ExpireInDays)).ToString("MMMM dd, yyyy")</b>
                     </div>
@@ -75,7 +75,7 @@
                     <div class="m-s">
                         @if (Model.LoginClients[0].ExpireInDays <= 14 && Model.LoginClients[0].ExpireInDays > 0)
                         {
-                            <strong>Your <b>LAN ID @Model.LoginClients[0].OnPremisesSamAccountName</b> is going to <b>expire</b> on </strong>
+                            <strong>Your <b>LAN ID @Model.OnPremisesSamAccountName</b> is going to <b>expire</b> on </strong>
 
                             <b>@DateTime.Now.AddDays(Convert.ToDouble(Model.LoginClients[0].ExpireInDays)).DayOfWeek, @DateTime.Now.AddDays(Convert.ToDouble(Model.LoginClients[0].ExpireInDays)).ToString("MMMM dd, yyyy"),</b>
 
@@ -85,7 +85,7 @@
                         {
                             <div class="m-t-2">
                                 <strong>
-                                    Your <b>LAN ID @Model.LoginClients[0].OnPremisesSamAccountName</b> has
+                                    Your <b>LAN ID @Model.OnPremisesSamAccountName</b> has
                                 </strong>
                                 <b> expired.</b> <strong> Please click on Change my password now. </strong>
                             </div>
